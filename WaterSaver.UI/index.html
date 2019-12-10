@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Moisture Sensor</title>
+    <link rel="icon" href="images/watersaver.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+    #footer{
+    background-color: #000d1a;
+}
+</style>
+
+<body>
+    <div class="container-sm">
+        <div id="header" class="jumbotron text-center" style="background-color:#33cccc">
+            <h1 style="color: white"><img id="logo" src="./images/watersaver.png" width="80px">&nbsp;Water Tank Monitoring
+                System</h1>
+            <h4>"Save Water, Save Life"</h4>
+        </div>
+        <div class="container">
+            <center>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="btn btn-info btn-sm" type="button" onclick="switch1()">
+                            <img id="switch1" src="./images/off.png" width="50" height="50" style="cursor: pointer">
+                        </button>
+                        <p id="switch_status1">Tank 1 motor is now off</p>
+                    </div>
+                    <div class="col-5">
+                        <button class="btn btn-info btn-sm" type="button" onclick="switch2()">
+                            <img id="switch2" src="./images/off.png" width="50" height="50" style="cursor: pointer">
+                        </button>
+                        <p id="switch_status2">Tank 2 motor is now off</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <h1>Tank 1</h1>
+                        <img id="tank1" src="./images/tank1.png" width="250" height="300">
+                    </div>
+                    <div class="col-5">
+                        <h1>Tank 2</h1>
+                        <img id="tank2" src="./images/tank2.png" width="250" height="300">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <h5 id="status_tank1">Status: Tank 1 is empty</h5>
+                    </div>
+                    <div class="col-5">
+                        <h5 id="status_tank2">Status: Tank 2 is empty</h5>
+                    </div>
+                </div>
+            </center>
+        </div>
+        <footer id="footer" class="page-footer font-small" style="margin-top: 5%">
+            <div class="footer-copyright text-center py-3" style="color:white">© 2019 Copyright:
+                <a href="#">Group
+                    B Class 2020-B Hitsuraan</a>
+            </div>
+        </footer>
+    </div>
+    <script src="browserMqtt.js"></script>
+    <script src="controller.js"></script>
+</body>
+
+</html>
